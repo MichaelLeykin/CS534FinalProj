@@ -1,0 +1,73 @@
+%char topLeft;
+%char topRight;
+%char bottomLeft;
+%char bottomRight;
+%char center;
+%disp(topLeft);
+%disp(topRight);
+%disp(bottomLeft);
+%disp(bottomRight);
+%disp(topRight(1)-topLeft(1));
+%disp(bottomLeft(2)-topLeft(2));
+%imshow(I3);
+%hold on;
+%for i = 1:length(centers)
+%    plot(centers(i,1),centers(i,2),'ro', 'MarkerSize', radii(i));
+%end
+%imwrite(secondToLastImg,'secondToLastImage.jpg');
+%imshow(secondToLastImg);
+%secondToLastImg = rgb2gray(secondToLastImg);
+%redChannel = secondToLastImg(:, :, 1);
+%greenChannel = secondToLastImg(:, :, 2);
+%blueChannel = secondToLastImg(:, :, 3);
+%disp(bottomLeft(2)-topLeft(2)+1);
+%disp(topRight(1)-topLeft(1)+1);
+%final(:,:,:) = cropped_img;
+%(1:(bottomLeft(2)-topLeft(2)+1),1:(topRight(1)-topLeft(1)+1));
+%I(topLeft(2):bottomLeft(2),topLeft(1):topRight(1)) = redChannel;
+%I(topLeft(2):bottomLeft(2),topLeft(1):topRight(1)) = greenChannel;
+%I(topLeft(2):bottomLeft(2),topLeft(1):topRight(1)) = blueChannel;
+%imshow(final);
+
+%hold on;
+    %plot(topLeft(1),topLeft(2), 'ro', 'MarkerSize', 2);
+    %plot(topRight(1),topRight(2), 'ro', 'MarkerSize', 2);
+    %plot(bottomLeft(1),bottomLeft(2), 'ro', 'MarkerSize', 2);
+    %plot(bottomRight(1),bottomRight(2), 'ro', 'MarkerSize', 2);
+    %plot(center(1),center(2), 'ro', 'MarkerSize', 2);
+%===============================================================================
+% Get the name of the image the user wants to use.
+%baseFileName = 'pimples.jpeg';
+
+% Get the full path of the iamge
+%folder = '/Users/unmesha/Desktop/';
+
+%fullFileName = fullfile(folder, baseFileName);
+
+% Check if file exists.
+%if ~exist(fullFileName, 'file') %if the file's not found in the path, enter
+  % Check the entire search path (other folders) for the file by stripping off the folder.
+  %fullFileNameOnSearchPath = baseFileName; % No path this time.
+  %if ~exist(fullFileNameOnSearchPath, 'file') 
+    % If the image's still not found.  Alert user.
+    %errorMessage = sprintf('Error: %s does not exist in the search path folders.', fullFileName);
+    %uiwait(warndlg(errorMessage));
+    %return;
+  %end
+%end
+%===============================================================================
+% Display the original image.
+% Enlarge figure to full screen.
+%set(gcf, 'Units', 'Normalized', 'OuterPosition', [0 0.05 1 0.95]);
+%centers = [329.2377  147.9132; 306.0239  215.4959; 181.5533  159.8729; 81.7124  208.4963];
+%randii = [12.7171 11.0986 11.8454 13.4546];
+%uiwait(helpdlg('Locate a point that resembles the original skin tone. Double-click to choose the point'));
+%p = impixel;
+%color = [(1/255)*p(1) (1/255)*p(2) (1/255)*p(3)];
+%centers = [x, y];
+%'/Users/Michael/Desktop/FaceEnhancer/clearedFace.jpg';
+    %set(gcf, 'Units', 'Normalized', 'OuterPosition', [0 0.05 0.75 0.75]);
+%caption = sprintf('New Cleared Image');
+    %title(caption, 'FontSize', fontSize, 'Interpreter', 'None');
+%caption = sprintf("original");
+    %title(caption, 'FontSize', fontSize, 'Interpreter', 'None');
